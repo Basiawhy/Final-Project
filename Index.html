@@ -19,7 +19,7 @@
                     <form id="search-engine">
                         <div class="row">
                             <div class="col-9">
-                                <input type="text" class="typecityform" id="type-city-form" placeholder="Type your city..." />
+                                <input type="text" class="typecityform" id="type-city-form" placeholder="Type your city..." autocomplete="off" />
                             </div>
                             <div class="col-3">
                                 <input type="submit" class="searchform" value="Search" />
@@ -33,12 +33,16 @@
                     <div class="row">
                         <div class="col-4">
 
-                            <h1 id="city"><em>San Francisco</em></h1>
+                            <h1 id="city"><em>Kraków</em></h1>
+                            <div class="weatherdata">
+                                <i class="todayweatherimg" id="icon">image</i>
+                                <span class="temperature" id="temp"><em> 25</em></span>
+                                <span class="units">
+                                    <a href="#" id="celsius-link" class="active">    °C</a> |
+                                    <a href="#" id="fahrenheit-link">°F</a>
+                                    </span>
 
-                            <h1 id="temp">
-                                <em>25°C</em> <i class="todayweatherimg"><i class="far fa-sun"></i>
-                                </i>
-                            </h1>
+                            </div>
                         </div>
                         <div class="col-4">
                             <br>
@@ -48,6 +52,8 @@
                             <h6 id="humidity" class="black">30% </h6><br>
                             <h6>Wind: </h6>
                             <h6 id="wind-speed" class="black">8km/h</h6><br>
+                            <h6>Overall :</h6>
+                            <h6 id="description" class="black">###</h6>
                         </div>
                         <div class="col-4">
                             <br>

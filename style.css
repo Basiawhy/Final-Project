@@ -4,7 +4,7 @@
 
 .weather-app {
     padding: 10px;
-    background-color: #E4F6F5;
+    background-image: linear-gradient(to right, #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%, #e2c58b 30%, #c2ce9c 64%, #7edbdc 100%);
     border: solid 6px;
     border-color: #76D1CB;
     border-radius: 10%;
@@ -30,7 +30,7 @@
     border: solid 2px;
     border-radius: 5px;
     border-color: #169990;
-    transition: all 150ms ease-in-out;
+    transition: all 200ms ease-in-out;
     font-weight: bolder;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -42,7 +42,7 @@
 
 .today {
     text-align: center;
-    padding: 20px 15px 10px;
+    padding: 20px 15px;
 }
 
 .todayweather {
@@ -50,55 +50,20 @@
 }
 
 .forecast {
-    padding: 5px 15px 30px;
+    padding: 10px 15px 30px;
 }
 
 .black {
     color: black;
 }
 
-h2 {
-    color: #E4426E;
-    font-size: 40px;
-}
-
-h1 {
-    font-size: 50px;
-    color: black;
-}
-
-h6 {
-    display: inline;
-}
-
 .card-body {
     text-align: center;
-    background-color: #E4F6F5;
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 }
 
 .card-title {
     font-size: 30px;
-}
-
-p {
-    font-size: 30px;
-}
-
-h5,
-h6 {
-    color: #E4426E;
-}
-
-p {
-    color: #19ADA3
-}
-
-h1,
-h2,
-h5,
-h6,
-p {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .sun {
@@ -108,10 +73,57 @@ p {
 
 .todayweatherimg {
     color: #FFA726;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .rain {
     color: #42A5F5;
     font-size: 30px;
+}
+
+.units {
+    font-size: 15px;
+    font-weight: bolder;
+    position: relative;
+    top: -25px;
+}
+
+.temperature {
+    font-size: 40px;
+    font-weight: bolder;
+    color: black;
+}
+
+h1 {
+    font-size: 50px;
+    color: black;
+}
+
+h2 {
+    color: #E4426E;
+    font-size: 40px;
+}
+
+h6 {
+    display: inline;
+}
+
+p {
+    font-size: 30px;
+    color: #19ADA3
+}
+
+h5,
+h6 {
+    color: #E4426E;
+}
+
+h1,
+h2,
+h5,
+h6,
+p,
+.units,
+.temperature {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

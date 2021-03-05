@@ -1,19 +1,40 @@
-function showTemperature(response) {
+function displayFahrenheit(event) {
+    event.preventDefault;
+    let fahrenheitTemperature = Math.round((celsjusTemperature * 9) / 5 + 32);
+    let temp = document.querySelector("#temp");
+    temp.innerHTML = `${fahrenheitTemperature}`;
+}
 
-    let currentTemperature = Math.round(response.data.main.temp);
+let fahrenheitLink = document.querySelector("fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheit);
+
+
+function showTemperature(response) {
+    console.log(response.data.weather[0].icon)
+
+    let celsjusTemperature = Math.round(response.data.main.temp);
     let feelsLikeTemperature = Math.round(response.data.main.feels_like);
     let currentHumidity = Math.round(response.data.main.humidity);
+    let descriptionElement = response.data.weather[0].description;
     let currentWindSpeed = Math.round(response.data.wind.speed);
+    let weatherIcon = response.data.weather[0].icon;
 
     let temp = document.querySelector("#temp");
-    temp.innerHTML = `${currentTemperature}°C`;
+    temp.innerHTML = `${celsjusTemperature}`;
     let feelsLike = document.querySelector("#feels-like");
     feelsLike.innerHTML = `${feelsLikeTemperature}°C`;
     let humidity = document.querySelector("#humidity");
     humidity.innerHTML = `${currentHumidity}%`;
     let windSpeed = document.querySelector("#wind-speed");
     windSpeed.innerHTML = `${currentWindSpeed}km/h`;
-
+    let description = document.querySelector("#description");
+    description.innerHTML = descriptionElement;
+    let iconElement = document.querySelector("#icon");
+    iconElement.setAttribute(
+        "src",
+        `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+    iconElement.setAttribute("alt", descriptionElement);
 }
 
 function updateCity(event) {
@@ -34,46 +55,19 @@ function updateCity(event) {
 let form = document.querySelector("#search-engine");
 form.addEventListener("submit", updateCity);
 
-function updateCurrentCity(response) {
 
-    let currentTemperature = Math.round(response.data.main.temp);
-    let city = (response.data.name);
-    let feelsLikeTemperature = Math.round(response.data.main.feels_like);
-    let currentHumidity = Math.round(response.data.main.humidity);
-    let currentWindSpeed = Math.round(response.data.wind.speed);
 
-    let temp = document.querySelector("#temp");
-    temp.innerHTML = `${currentTemperature}°C`;
-    let cityId = document.querySelector("#city");
-    cityId.innerHTML = city;
-    let feelsLike = document.querySelector("#feels-like");
-    feelsLike.innerHTML = `${feelsLikeTemperature}°C`;
-    let humidity = document.querySelector("#humidity");
-    humidity.innerHTML = `${currentHumidity}%`;
-    let windSpeed = document.querySelector("#wind-speed");
-    windSpeed.innerHTML = `${currentWindSpeed}km/h`;
+function search(city) {
+    let apiKey = "6f15b9e63ca98a2a211c4686cbce00b6";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(showTemperature)
 
-}
-
-function showPosition(position) {
-
-    let latitude = (position.coords.latitude);
-    let longitude = (position.coords.longitude);
-
-    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=6f15b9e63ca98a2a211c4686cbce00b6`;
-
-    axios.get(url).then(updateCurrentCity);
+    //
+    apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayForecast);
 }
 
 
-function searchCurrentLocation(event) {
-    event.preventDefault();
-    navigator.geolocation.getCurrentPosition(showPosition);
-
-}
-
-let currentLocationButton = document.querySelector("#current-location");
-currentLocationButton.addEventListener("click", (searchCurrentLocation));
 
 let now = new Date;
 let currentDate = now.getDate();
@@ -93,10 +87,10 @@ let currentDay = days[now.getDay()];
 let months = [
     "Jan",
     "Feb",
-    "Mar",
-    "Apr",
+    "March",
+    "April",
     "May",
-    "Jun",
+    "June",
     "July",
     "Aug",
     "Sept",
@@ -110,3 +104,5 @@ let formattedDate = `${currentDay}, ${currentMonth} ${currentDate}, ${currentYea
 
 let h2 = document.querySelector("h2");
 h2.innerHTML = formattedDate;
+
+search("Kraków");
