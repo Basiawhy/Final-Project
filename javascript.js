@@ -85,12 +85,24 @@ function showTemperature(response) {
     console.log(response);
 
     celsjusTemperature = Math.round(response.data.main.temp);
+
+    let image = document.querySelector("#extra-image");
+
+
+    if (celsjusTemperature > 20) {
+        image.setAttribute = ("src", "src\Sun_Two Color.svg");
+    } else {
+        if (celsjusTemperature < 5) {
+            image.setAttribute = ("src", "src\Snow_Two Color.svg");
+        } else {
+            image.setAttribute = ("src", "src\Rain_Monochromatic.svg");
+        }
+    }
+
     let feelsLikeTemperature = Math.round(response.data.main.feels_like);
     let currentHumidity = Math.round(response.data.main.humidity);
     let descriptionElement = response.data.weather[0].description;
     let currentWindSpeed = Math.round(response.data.wind.speed);
-
-
 
     let temp = document.querySelector("#temp");
     temp.innerHTML = `${celsjusTemperature}`;
@@ -108,6 +120,7 @@ function showTemperature(response) {
         `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
     iconElement.setAttribute("alt", descriptionElement);
+
 }
 
 function updateCity(event) {
