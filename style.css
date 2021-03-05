@@ -5,7 +5,7 @@
 .weather-app {
     padding: 10px;
     background-color: #E4F6F5;
-    border: solid 8px;
+    border: solid 6px;
     border-color: #76D1CB;
     border-radius: 10%;
 }
@@ -18,7 +18,7 @@
     height: 50px;
     width: 600px;
     background-color: #dfa6bc;
-    border: solid 3px;
+    border: solid 2px;
     border-radius: 5px;
     border-color: #be2d54;
 }
@@ -27,20 +27,22 @@
     height: 50px;
     width: 200px;
     background-color: #8ce9e3;
-    border: solid 3px;
+    border: solid 2px;
     border-radius: 5px;
     border-color: #169990;
     transition: all 150ms ease-in-out;
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .searchform.hover {
-    background-color: #2a807a;
+    background-color: #052b28;
     cursor: pointer;
 }
 
 .today {
     text-align: center;
-    padding: 10px 15px;
+    padding: 20px 15px 10px;
 }
 
 .todayweather {
@@ -48,7 +50,11 @@
 }
 
 .forecast {
-    padding: 5px 15px 20px;
+    padding: 5px 15px 30px;
+}
+
+.black {
+    color: black;
 }
 
 h2 {
@@ -58,6 +64,11 @@ h2 {
 
 h1 {
     font-size: 50px;
+    color: black;
+}
+
+h6 {
+    display: inline;
 }
 
 .card-body {
@@ -78,9 +89,16 @@ h6 {
     color: #E4426E;
 }
 
-p,
-h1 {
+p {
     color: #19ADA3
+}
+
+h1,
+h2,
+h5,
+h6,
+p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .sun {
@@ -90,7 +108,7 @@ h1 {
 
 .todayweatherimg {
     color: #FFA726;
-    font-size: 80px;
+    font-size: 50px;
 }
 
 .rain {
