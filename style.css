@@ -1,0 +1,98 @@
+    .container {
+        display: block;
+        margin: 50px 3000px;
+        max width: 60%;
+        background-color: #E4F6F5;
+        border: solid 8px;
+        border-color: #76D1CB;
+    }
+    
+    .searchengine {
+        padding: 100px 50px 20px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .typecityform {
+        width: 400px;
+        height: 50px;
+        background-color: #dfa6bc;
+        border: solid 3px;
+        border-radius: 5px;
+        border-color: #be2d54;
+    }
+    
+    .searchform {
+        width: 200px;
+        height: 50px;
+        background-color: #8ce9e3;
+        border: solid 3px;
+        border-radius: 5px;
+        border-color: #169990;
+        transition: all 150ms ease-in-out;
+    }
+    
+    .searchform.hover {
+        background-color: #2a807a;
+        cursor: pointer;
+    }
+    
+    .today {
+        text-align: center;
+    }
+    
+    .todayweather {
+        display: block;
+        padding: 20px 400px;
+    }
+    
+    .forecast {
+        padding: 50px 50px;
+    }
+    
+    h2 {
+        color: #E4426E;
+        font-size: 40px;
+    }
+    
+    h1 {
+        font-size: 50px;
+    }
+    
+    .card-body {
+        text-align: center;
+        background-color: #E4F6F5;
+    }
+    
+    .card-title {
+        font-size: 30px;
+    }
+    
+    p {
+        font-size: 30px;
+    }
+    
+    h5,
+    h6 {
+        color: #E4426E;
+    }
+    
+    p,
+    h1 {
+        color: #19ADA3
+    }
+    
+    .sun {
+        color: #FFA726;
+        font-size: 30px;
+    }
+    
+    .todayweatherimg {
+        color: #FFA726;
+        font-size: 80px;
+    }
+    
+    .rain {
+        color: #42A5F5;
+        font-size: 30px;
+    }
