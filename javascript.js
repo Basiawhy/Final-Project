@@ -90,12 +90,12 @@ function showTemperature(response) {
 
 
     if (celsjusTemperature > 20) {
-        image.setAttribute("src", "src\Sun_Two Color.svg");
+        image.setAttribute('src', 'src\\Sun_Two Color.svg');
     } else {
         if (celsjusTemperature < 5) {
-            image.setAttribute("src", "src\Snow_Two Color.svg");
+            image.setAttribute('src', 'src\\Snow_Two Color.svg');
         } else {
-            image.setAttribute("src", "src\Rain_Monochromatic.svg");
+            image.setAttribute('src', 'src\\Rain_Monochromatic.svg');
         }
     }
 
