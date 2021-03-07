@@ -112,6 +112,14 @@
     font-size: 20px;
 }
 
+.GitHub {
+    display: block;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #0e776e;
+    font-style: italic;
+}
+
 h1 {
     font-size: 50px;
     color: black;
