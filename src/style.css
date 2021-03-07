@@ -79,19 +79,9 @@
     font-size: 30px;
 }
 
-.sun {
-    color: #FFA726;
-    font-size: 30px;
-}
-
 .todayweatherimg {
     color: #FFA726;
     font-size: 40px;
-}
-
-.rain {
-    color: #42A5F5;
-    font-size: 30px;
 }
 
 .units {
@@ -116,6 +106,10 @@
     font-size: 40px;
     font-weight: bolder;
     color: black;
+}
+
+.weather-forecast-temperature {
+    font-size: 20px;
 }
 
 h1 {
