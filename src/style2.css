@@ -1,13 +1,12 @@
-.app-wrapper {
-    margin: 20px 100px;
-}
-
 .weather-app {
+    display: block;
+    margin: 30px auto;
+    max-width: 900px;
     padding: 10px;
     background-image: linear-gradient(to right, #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%, #e2c58b 30%, #c2ce9c 64%, #7edbdc 100%);
     border: solid 6px;
     border-color: #76D1CB;
-    border-radius: 10%;
+    border-radius: 40px;
 }
 
 .additional-surprise {
@@ -26,6 +25,7 @@
 .typecityform {
     height: 50px;
     width: 600px;
+    max-width: 100%;
     background-color: #dfa6bc;
     border: solid 2px;
     border-radius: 5px;
@@ -36,6 +36,7 @@
 .searchform {
     height: 50px;
     width: 200px;
+    max-width: 100%;
     background-color: #8ce9e3;
     border: solid 2px;
     border-radius: 5px;
@@ -77,11 +78,7 @@
 
 .card-title {
     font-size: 30px;
-}
-
-.todayweatherimg {
-    color: #FFA726;
-    font-size: 40px;
+    max-width: 100%;
 }
 
 .units {
@@ -120,6 +117,10 @@
     font-style: italic;
 }
 
+.icon {
+    max-width: 100%;
+}
+
 h1 {
     font-size: 50px;
     color: black;
@@ -133,6 +134,7 @@ h2 {
 
 h6 {
     display: inline;
+    max-width: 100%;
 }
 
 p {
@@ -152,5 +154,6 @@ h6,
 p,
 .units,
 .temperature {
+    max-width: 100%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
