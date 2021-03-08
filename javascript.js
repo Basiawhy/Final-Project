@@ -152,7 +152,7 @@ function search(city) {
 }
 
 function displayFahrenheit(event) {
-    event.preventDefault;
+    event.preventDefault();
 
     celsjusLink.classList.remove("active");
     fahrenheitLink.classList.add("active");
@@ -163,7 +163,7 @@ function displayFahrenheit(event) {
 }
 
 function displayCelsjus(event) {
-    event.preventDefault;
+    event.preventDefault();
 
     celsjusLink.classList.add("active");
     fahrenheitLink.classList.remove("active");

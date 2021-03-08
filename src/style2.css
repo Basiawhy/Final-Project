@@ -50,6 +50,7 @@
 .searchform:hover {
     background-color: #0e776e;
     cursor: pointer;
+    color: whitesmoke;
 }
 
 .today {
@@ -125,6 +126,7 @@ h1 {
     font-size: 50px;
     color: black;
     font-style: italic;
+    max-width: 100%;
 }
 
 h2 {
@@ -154,6 +156,5 @@ h6,
 p,
 .units,
 .temperature {
-    max-width: 100%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
