@@ -110,12 +110,13 @@
     font-size: 20px;
 }
 
-.GitHub {
-    display: block;
+.Git-link {
+    text-align: center;
     font-size: 20px;
     font-weight: bolder;
     color: #0e776e;
     font-style: italic;
+    text-decoration: none;
 }
 
 .icon {
